@@ -1,6 +1,20 @@
-// Import stylesheets
-import './style.css';
+function ValidateForm(){
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
 
-// // Write Javascript code!
-// const appDiv = document.getElementById('app');
-// appDiv.innerHTML = `<h1>JS about:blank</h1>`;
+    if(name == ""){
+      alert("Nombre es Requerido")
+      return false;
+    }
+
+    if(email == ""){
+      alert("Correo es Requerido")
+      return false;
+    }
+    elseif(!email.inludes("@")){
+      alert("Direccion invalida");
+      return false;
+    }
+
+}
+
